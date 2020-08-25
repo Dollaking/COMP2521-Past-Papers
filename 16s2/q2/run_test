@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for t in {1..8}
+do
+	echo ============ Test $t ===============
+	./q2 < tests/t$t.in > tests/t$t.obs
+	diff tests/t$t.exp tests/t$t.obs
+done
